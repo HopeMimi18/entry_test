@@ -1,66 +1,62 @@
 # Part B: Design Document
 
-**Contract Name:** [SkillsMarketplace / SecureLottery]  
+**Section 1: SkillsMarketplace (Agricultural Marketplace)**
+**Section 2: SecureLottery (DeFi & NFT Integration)**
 
 ---
 
-## WHY I BUILT IT THIS WAY
+## 🏗️ WHY I BUILT IT THIS WAY
 
-### Data Structure Choices
+### 1. Data Structure Choices
+**Explain your design decisions for BOTH contracts:**
+- When would you choose to use a `mapping` instead of an `array`?
+- How did you structure your state variables in `SkillsMarketplace` vs `SecureLottery`?
+- What trade-offs did you consider for storage efficiency?
 
-**Explain your design decisions:**
-- When would you choose to use a mapping instead of an array in your smart contract? C
-- How did you structure your state variables?
-- What trade-offs did you consider?
-
-[Write about your data structure choices]
+[Write your response here]
 
 ---
 
-### Security Measures
-
-**What attacks did you protect against?**
-- Reentrancy attacks?
+### 2. Security Measures
+**What attacks did you protect against in BOTH implementations?**
+- Reentrancy attacks? (Explain your implementation of the Checks-Effects-Interactions pattern)
 - Access control vulnerabilities?
 - Integer overflow/underflow?
-- Front-running?
+- Front-running/Randomness manipulation (specifically for `SecureLottery`)?
 
-[Write about your security approach]
+[Write your response here]
 
 ---
 
-### Trade-offs
-
+### 3. Trade-offs & Future Improvements
 **What would you change with more time?**
-- Gas optimisation opportunities?
-- Additional features?
+- Gas optimization opportunities?
+- Additional features (e.g., dispute resolution, multiple prize tiers)?
 - Better error handling?
 
-[Write about trade-offs and future improvements]
+[Write your response here]
 
 ---
 
 ## REAL-WORLD DEPLOYMENT CONCERNS
 
-### Gas Costs
+### 1. Gas Costs
+**Analyze the viability of your contracts for real-world use:**
+- Estimated gas for key functions (e.g., `postGig`, `selectWinner`).
+- Is this viable for users in constrained environments (e.g., high gas fees)?
+- Any specific optimization strategies you implemented?
 
-**How much would it cost to use your contract?**
-- Estimated gas for key functions
-- Is this viable for African users?
-- Any optimisation strategies?
-
-[Write about your gas considerations]
+[Write your response here]
 
 ---
 
-### Scalability
+### 2. Scalability
+**What happens with 10,000+ entries/gigs?**
+- Performance considerations for loops or large arrays.
+- Storage cost implications.
+- Potential bottlenecks in `selectWinner` or `applyForGig`.
 
-**What happens with 10 000 gigs/entries?**
-- Performance considerations
-- Storage costs
-- Potential bottlenecks
-
-[Write about scalability]
+[Write your response here]
 
 ---
 

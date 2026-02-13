@@ -1,11 +1,11 @@
 # Part A: MCQ Answers
 
-**Chosen Version:** [VERSION 1: Agricultural Marketplace / VERSION 2: DeFi & NFT Integration]  
+**Status:** [In Progress / Submitted]  
 
 ---
 
 ## Instructions
-**CHOOSE ONE VERSION BELOW AND COMPLETE ALL THREE QUESTIONS FOR THAT VERSION**
+**COMPLETE ALL QUESTIONS FOR BOTH VERSION 1 AND VERSION 2 BELOW**
 
 ---
 
@@ -117,8 +117,7 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 
 ## SUBMISSION CHECKLIST
 
-- You chose **ONE version only** (Version 1 OR Version 2)  
-- You answered all three questions for your chosen version  
+- You answered all questions for **BOTH Version 1 AND Version 2**  
 - Your answers include reasoning (not just A/B/C/D)  
 - For Version 1 Q2: You showed your gas cost calculations  
 - For Version 2: You addressed all three concept areas (AMM, Governance, Token Standards)  

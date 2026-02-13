@@ -1,186 +1,91 @@
-# Quick Setup Guide
+# 🚀 Blockchain Developer Entry Test (3-Hour Challenge)
 
-## Prerequisites
+Welcome to the entry test! You have **3 hours** to complete the entire assessment. 
 
-Before starting the assessment, ensure you have:
-
-- [ ] **VS Code** installed on your machine
-- [ ] **Git** installed and configured
-- [ ] **Node.js** (v20 or higher) and npm installed
-- [ ] **GitLab account** with access to fork repositories
-- [ ] **Basic Solidity knowledge**
+> [!IMPORTANT]
+> You must complete **BOTH** Version 1 (Skills Marketplace) and Version 2 (Secure Lottery) for all parts of this assessment.
 
 ---
 
-## Step 1: Fork the Repository
+## ⏱️ Timeline & Submission
 
-1. Click the **Fork** button in the top right 
-2. Select your namespace to fork the project
+- **Duration:** 3 Hours
+- **Submission:** Fork this repo, commit regularly (every 15-30 mins), and push to your fork.
 
 ---
 
-## Step 2: Clone to Your Local Machine
+## 📋 Prerequisites
 
+Ensure you have:
+- **Node.js** (v20+) & **npm**
+- **Git** configured (`git config user.name "Your Name"`)
+- **VS Code** (Solidity extension by Juan Blanco recommended)
+- A GitLab/GitHub account to host your fork
+
+---
+
+## 🚀 Getting Started
+
+### 1. Fork & Clone
+1. **Fork** this repository to your own namespace.
+2. Clone your forked repo:
+   ```bash
+   git clone [YOUR_FORK_URL]
+   cd blockchain_dev_entry_test
+   ```
+
+### 2. Environment Setup
 ```bash
-# Clone your forked repository
-git clone https://gitlab.wethinkco.de/YOUR_USERNAME/blockchain_dev_entry_test.git
-
-# Navigate into the directory
-cd blockchain_dev_entry_test
-```
-
----
-
-## Step 3: Open in VS Code
-
-```bash
-# Open VS Code in the current directory
-code .
-```
-
----
-
-## Step 4: Install Solidity Extension (Optional but Recommended)
-
-1. Open VS Code Extensions (Ctrl+Shift+X)
-2. Search for "Solidity" by Juan Blanco
-3. Click **Install**
-
----
-
-## Step 5: Initialise Hardhat (Optional)
-
-If you want to compile and test your contracts locally:
-
-```bash
-# Install Hardhat
+# Install dependencies (Hardhat + Toolbox)
 npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox
 
-# Initialise Hardhat project
-npx hardhat
-
-# Select: Create a basic sample project
-# Accept defaults
+# Initialize Hardhat (if not already initialized)
+npx hardhat 
+# Choose: Create an empty hardhat.config.js
 ```
 
 ---
 
-## Step 6: Verify Git Configuration
+## 🛠️ Assessment Structure
 
-```bash
-# Check your Git identity
-git config user.name
-git config user.email
+### Part A: MCQ & Theory (`PartA_MCQ_Answers.md`)
+- Answer **ALL** questions for **BOTH** Version 1 and Version 2.
+- Provide clear reasoning for your choices.
 
-# If not set, configure them
-git config user.name "Your Name"
-git config user.email "your.email@example.com"
-```
+### Part B: Design & Implementation
+You are provided with two contract skeletons in `contracts/`:
+1. `SkillsMarketplace.sol` (Version 1)
+2. `SecureLottery.sol` (Version 2)
 
----
-
-## Step 7: Test Push Access
-
-```bash
-# Create a test commit
-git commit --allow-empty -m "Test: Verify push access"
-
-# Push to verify access
-git push origin main
-
-# If successful, you're ready!
-```
+**Your Tasks for BOTH contracts:**
+1. **Implementation:** Complete the `TODO` sections in both `.sol` files.
+2. **Design Documentation:** Fill in `PartB_Design.md` detailing your architectural choices, security measures, and trade-offs.
+3. **Test Planning:** Fill in `PartB_Tests.md` with your test scenarios.
+4. **Test Implementation:** Create a `test/` directory and implement automated tests for both contracts using Hardhat.
+   - Example: `test/SkillsMarketplace.test.js` and `test/SecureLottery.test.js`
+   - Run tests with: `npx hardhat test`
 
 ---
 
-## During the Assessment
-
-### Commit Regularly (Every 15 Minutes)
-
-```bash
-git add .
-git commit -m "Progress: [describe what you did]"
-git push origin main
-```
-
-### File Structure You'll Work With
+## 📁 File Structure
 
 ```
 blockchain_dev_entry_test/
-├── README.md                     # This file
-├── PartA_MCQ_Answers.md          # Fill in your MCQ answers here
-├── PartB_Design.md               # Document your design decisions
-├── PartB_Tests.md                # Describe your test scenarios
 ├── contracts/
-│   ├── SkillsMarketplace.sol     # VERSION 1 (choose one)
-│   └── SecureLottery.sol         # VERSION 2 (choose one)
-└── test/
-│   ├── YourContractName.test.js  # Create this file for test implementation
-└── docs/
-    ├── GIT-WORKFLOW.md           # Git help
-    └── SOLIDITY-PATTERNS.md      # Security patterns
+│   ├── SkillsMarketplace.sol     # Complete this (Scenario 1)
+│   └── SecureLottery.sol         # Complete this (Scenario 2)
+├── test/                         # [NEW] Create your tests here
+├── PartA_MCQ_Answers.md          # Complete ALL questions
+├── PartB_Design.md               # Document BOTH designs
+├── PartB_Tests.md                # Describe BOTH test plans
+└── docs/                         # Reference materials
 ```
 
-**Test Implementation Requirements**:
-1. Create a `test` directory if it doesn't exist
-2. Name your test file as `YourContractName.test.js` (e.g. `SkillsMarketplace.test.js`)
-3. Use Hardhat's testing framework (already set up if you initialized Hardhat)
-4. Your tests should:
-   - Be written in JavaScript/TypeScript
-   - Cover all scenarios described in PartB_Tests.md
-   - Be executable with `npx hardhat test`
-
 ---
 
-## Troubleshooting
-
-### Can't Push to GitLab
-
-```bash
-# Make sure you're on the right branch
-git branch
-
-# Make sure you forked (not cloned the original)
-git remote -v
-
-# Should show YOUR_USERNAME, not performanceteam
-```
-
-### VS Code Not Opening
-
-```bash
-# Try full path
-"C:\Program Files\Microsoft VS Code\Code.exe" .
-
-# Or add VS Code to PATH and restart terminal
-```
-
-### Solidity Syntax Not Highlighting
-
-- Install Solidity extension from VS Code Marketplace
-- Restart VS Code
-- Check file extension is `.sol`
-
----
-
-## Quick Reference
-
-| Command | Purpose |
-|---------|--------|
-| `git status` | Check what files changed |
-| `git add .` | Stage all changes |
-| `git commit -m "message"` | Save changes locally |
-| `git push origin main` | Upload to GitLab |
-| `git log --oneline` | View commit history |
-
----
-
-## Need Help During Assessment?
-
-- Refer to `docs/GIT-WORKFLOW.md` for Git commands
-- Check `docs/SOLIDITY-PATTERNS.md` for security patterns
-- Review `docs/RESOURCES.md` for learning materials
-
----
+## 💡 Tips for Success
+- **Security Matters:** We check for Reentrancy, Access Control, and Integer Handling.
+- **Gas is Money:** Mention gas optimization strategies in your design document.
+- **Commit History:** We look at your commit frequency to understand your workflow.
 
 **All the best!**

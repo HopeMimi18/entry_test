@@ -4,7 +4,7 @@ pragma solidity ^0.8.18;
 /**
  * @title SkillsMarketplace
  * @dev A decentralised marketplace for skills and gigs
- * @notice VERSION 1 - Skills Marketplace for African youth employment
+ * @notice VERSION 1 - Skills Marketplace (MANDATORY)
  */
 contract SkillsMarketplace {
     

@@ -4,7 +4,7 @@ pragma solidity ^0.8.18;
 /**
  * @title SecureLottery
  * @dev An advanced lottery smart contract with security features
- * @notice VERSION 2 - Secure Lottery with fairness mechanisms
+ * @notice VERSION 2 - Secure Lottery (MANDATORY)
  */
 contract SecureLottery {
     
