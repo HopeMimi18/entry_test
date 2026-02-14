@@ -13,7 +13,17 @@ contract SkillsMarketplace {
     // - How will you track workers and their skills?
     // - How will you store gig information?
     // - How will you manage payments?
+    string skill;
+    int gigId;
+    int gigIdCounter;
+    string description;
+    int payment;
+    string workers;
     
+    mapping(address => string) public workerSkills;
+    mapping(address => bool) public isRegistered;
+
+
     address public owner;
     
     constructor() {
@@ -27,6 +37,16 @@ contract SkillsMarketplace {
     // - Emit an event when a worker registers
     function registerWorker(string memory skill) public {
         // Your implementation here
+        // validate non-empty skill and reasonable length
+        require(bytes(skill).length > 0, "skill cannot be empty");
+        require(bytes(skill).length < 100, "skill cannot be too long");
+
+        require(!isRegistered[msg.sender], "Worker already registered");
+
+        workers[msg.sender] = skill;
+        isRegistered[msg.sender] = true;
+        emit workerRegistered(msg.sender, skill);
+        
     }
     
     // TODO: Implement postGig function
@@ -38,6 +58,14 @@ contract SkillsMarketplace {
     function postGig(string memory description, string memory skillRequired) public payable {
         // Your implementation here
         // Think: How do you safely hold the ETH until work is approved?
+        require(msg.value > 0, "Must send ETH to post a gig");
+        require(msg.value >= MIN_GIG_AMOUNT, "Amount too low");
+        require(bytes(description).length > 0, "Description required");
+            
+        gigIdCounter++;
+        gigId = gigIdCounter;
+          
+        emit gigPosted(gigId, msg.sender, description, skillRequired, msg.value);
     }
     
     // TODO: Implement applyForGig function
