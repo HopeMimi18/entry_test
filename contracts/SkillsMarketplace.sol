@@ -13,12 +13,13 @@ contract SkillsMarketplace {
     // - How will you track workers and their skills?
     // - How will you store gig information?
     // - How will you manage payments?
-    string skill;
-    int gigId;
-    int gigIdCounter;
-    string description;
-    int payment;
+    //string skill;
+    uint256 gigId;
+    uint256 gigIdCounter;
+    //string description;
+    uint256 payment;
     string workers;
+    uint256 constant MIN_GIG_AMOUNT = 0.01 ether;
     
     mapping(address => string) public workerSkills;
     mapping(address => bool) public isRegistered;
@@ -45,7 +46,7 @@ contract SkillsMarketplace {
 
         workers[msg.sender] = skill;
         isRegistered[msg.sender] = true;
-        emit workerRegistered(msg.sender, skill);
+       // emit workerRegistered(msg.sender, skill);
         
     }
     
@@ -61,11 +62,12 @@ contract SkillsMarketplace {
         require(msg.value > 0, "Must send ETH to post a gig");
         require(msg.value >= MIN_GIG_AMOUNT, "Amount too low");
         require(bytes(description).length > 0, "Description required");
+        require(bytes(skillRequired).length > 0, "skills requred");
             
         gigIdCounter++;
         gigId = gigIdCounter;
           
-        emit gigPosted(gigId, msg.sender, description, skillRequired, msg.value);
+        //emit gigPosted(gigId, msg.sender, description, skillRequired, msg.value);
     }
     
     // TODO: Implement applyForGig function
