@@ -18,7 +18,7 @@ contract SkillsMarketplace {
     uint256 gigIdCounter;
     //string description;
     uint256 payment;
-    string workers;
+    uint256 workers;
     uint256 constant MIN_GIG_AMOUNT = 0.01 ether;
     
     mapping(address => string) public workerSkills;
@@ -44,7 +44,7 @@ contract SkillsMarketplace {
 
         require(!isRegistered[msg.sender], "Worker already registered");
 
-        workers[msg.sender] = skill;
+        workerSkills[msg.sender] = skill;
         isRegistered[msg.sender] = true;
        // emit workerRegistered(msg.sender, skill);
         
