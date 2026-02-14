@@ -15,10 +15,10 @@
 - What trade-offs did you consider for storage efficiency?
 
 [Write your response here]
-
---- I HAVE LEARNT THAT WE USE MAPPING WHEN I WANT TO USE AN INDEX [] ON A VARIABLE
---- SINCE SOME VARIEABLES WERE ALREADY DECLARED AS PARAMETERS, I ADDED MORE NECESSARY VARIABLES ON THE CONTRACTS
---- IM NOT SURE WHAT THIS IS ABOUT
+I HAVE LEARNT THAT WE USE MAPPING WHEN I WANT TO USE AN INDEX [] ON A VARIABLE
+ SINCE SOME VARIEABLES WERE ALREADY DECLARED AS PARAMETERS, I ADDED MORE NECESSARY VARIABLES ON THE CONTRACTS
+ IM NOT SURE WHAT THIS IS ABOUT
+--- 
 
 ### 2. Security Measures
 **What attacks did you protect against in BOTH implementations?**
@@ -28,8 +28,8 @@
 - Front-running/Randomness manipulation (specifically for `SecureLottery`)?
 
 [Write your response here]
-
----
+i couln't implement any of that since i lack a lot of in, i would like to learn more though
+--- 
 
 ### 3. Trade-offs & Future Improvements
 **What would you change with more time?**
@@ -38,8 +38,8 @@
 - Better error handling?
 
 [Write your response here]
-
----
+i would like to learn more on writting logic code in this language, and try to understand more of gas optimization
+--- 
 
 ## REAL-WORLD DEPLOYMENT CONCERNS
 
@@ -50,8 +50,8 @@
 - Any specific optimization strategies you implemented?
 
 [Write your response here]
-
----
+I THOUGH GAS IS FOR CALCULATING CHARGES/FEES :\
+--- 
 
 ### 2. Scalability
 **What happens with 10,000+ entries/gigs?**
@@ -60,7 +60,7 @@
 - Potential bottlenecks in `selectWinner` or `applyForGig`.
 
 [Write your response here]
-
+CONSIDERATION FOR LOOPS OR LARGE ARRAYS, LIKE MAYBE A WHILE LOOP
 ---
 
 ### User Experience
@@ -71,7 +71,7 @@
 - Mobile accessibility?
 
 [Write about your UX(user experience) considerations]
-
+MOBILE ACCESSIBILITY, SINCE ALMOST EVERYONE HAS A PHONE AND INTERNET ACCESS, IT WOULD BE EASY FOR MOST PEOPLE TO ACCESS IT
 ---
 
 ## MY LEARNING APPROACH
@@ -84,7 +84,7 @@
 - Community resources
 
 [List 3-5 resources you used]
-
+I USED THE SOLIDITY-PATTERN.md FILE, SolidityLang AND THE MOST USEFULL ONE Cyfrin Updraft courses
 ---
 
 ### Challenges Faced
@@ -95,7 +95,7 @@
 - What you learned
 
 [Write down your challenges]
-
+MY BIGGEST TECHNICAL CHALLAGE WAS WRTING THE LOGIC PART, IM VERY NEW TO THE LANGUAGE AND BLOCKCHIAN SMART CONTRACTS BUT I'VE LEARNED HOW TO DECLARE VARIABLE AND HOW TO VALIDATE INPUT DATA. THE BLOCKCHAIN CONCEPTS WERE ALSO BERY INTERESTING, I WILL BE CONTINUING WITH THE ONLINE COURSE TO LEARN MORE IN DEPTH
 ---
 
 ### What I'd Learn Next
@@ -106,5 +106,5 @@
 - Frontend integration
 
 [Write your future learning goals]
-
+I WOULD LIKE TO LEARN MORE ABOUT ADVANCED SOLIDITY PATTERN AND FRONTEND INTEGRATION AND MASTER THE LANGUES ITSELF:)
 ---
