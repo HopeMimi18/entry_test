@@ -108,8 +108,10 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 **Your Reasoning:**  
 Because it explains governance and technical implementation and how they all work together
 - **AMM Mathematics:** How do you calculate the swap output? What happens to the liquidity provider's value?  
-- **DeFi Governance:** What is impermanent loss and how does protection work?  
+- **DeFi Governance:** What is impermanent loss and how does protection work? 
+i just know iy helps protect againts hyperinflation 
 - **Token Standards:** Why might ERC-1155 be preferred over ERC-721 for marketplace integration?  
+because ERC-115T tokens are not compatible with standard DEX protocols
 
 [2–3 sentences synthesising these concepts into a coherent explanation]  
 
