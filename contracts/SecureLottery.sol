@@ -12,6 +12,8 @@ contract SecureLottery {
     uint256 public lotteryId;
     uint256 public lotteryStartTime;
     bool public isPaused;
+    uint256 public minimumEntryAmount = 0.01 ether;
+
     
     // TODO: Define additional state variables
     // Consider:
@@ -36,6 +38,9 @@ contract SecureLottery {
         // Your implementation here
         // Validation: Check minimum entry amount
         // Validation: Check if lottery is active
+
+        require(msg.value >= minimumEntryAmount, "Minimum entry amount is 0.01 ETH");
+        require(!isPaused, "Lottery is paused");
     }
     
     // TODO: Implement winner selection function
@@ -69,10 +74,13 @@ contract SecureLottery {
     
     function pause() public onlyOwner {
         // Your implementation
+        require(!isPaused, "Already paused");
+        isPaused = true;
     }
     
     function unpause() public onlyOwner {
         // Your implementation
+        isPaused = false;
     }
     
     // TODO: Implement reentrancy protection
