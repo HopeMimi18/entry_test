@@ -16,7 +16,9 @@
 
 [Write your response here]
 
----
+--- I HAVE LEARNT THAT WE USE MAPPING WHEN I WANT TO USE AN INDEX [] ON A VARIABLE
+--- SINCE SOME VARIEABLES WERE ALREADY DECLARED AS PARAMETERS, I ADDED MORE NECESSARY VARIABLES ON THE CONTRACTS
+--- IM NOT SURE WHAT THIS IS ABOUT
 
 ### 2. Security Measures
 **What attacks did you protect against in BOTH implementations?**
