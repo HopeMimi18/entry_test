@@ -29,12 +29,12 @@
 - **C)** Use ERC-721 exclusively, store all data off-chain for gas savings, and require buyers to use MetaMask with manual price negotiations.  
 - **D)** Build everything as separate NFT collections with no DEX integration since farmers won't understand DeFi protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Reasoning:**  
 [2–3 sentences explaining why you chose this answer. What makes it the best choice?]  
 
----
+---because this would fully enable farmers to list produce as NFT, let buyes swap token for produce, store reputation score transparently and processes payments without 3rd party banks and minimise intermediaries, going fully decentralised
 
 ### Question 2: Cost Optimisation (Practical Aptitude)
 
@@ -76,12 +76,12 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** "Because smart contracts are more secure than databases and Web3 is decentralised."  
 - **D)** "Blockchain uses cryptography which makes it unhackable, unlike normal databases."  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [C]  
 
 **Your Explanation:**  
 [2–3 sentences explaining what makes this answer correct. What did you learn about why blockchain matters in Africa?]  
 
----
+---because there is no middleman to manipulate anything, blockchain keeps record of everything like a decentrilised database, blockchain matters in africa because it it not biased, regardless of nationality or wealth status so African business won't be taken for granted 
 
 ## PART 2: DeFi & NFT Integration (Advanced Concepts)
 
@@ -103,10 +103,10 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** The liquidity provider experiences impermanent loss because the pool maintains a constant product rather than constant ratio. ERC-721 would be more suitable than ERC-1155 for the NFT marketplace since individual NFTs require unique transactions.  
 - **D)** The constant product formula prevents any impermanent loss by automatically rebalancing. DAOs cannot implement financial protections due to smart contract immutability. ERC-1155 tokens are incompatible with standard DEX protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [D]  
 
 **Your Reasoning:**  
-
+Because it explains governance and technical implementation and how they all work together
 - **AMM Mathematics:** How do you calculate the swap output? What happens to the liquidity provider's value?  
 - **DeFi Governance:** What is impermanent loss and how does protection work?  
 - **Token Standards:** Why might ERC-1155 be preferred over ERC-721 for marketplace integration?  
